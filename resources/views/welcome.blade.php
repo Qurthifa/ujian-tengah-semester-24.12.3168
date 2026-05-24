@@ -62,14 +62,12 @@
             </div>
            <!-- Blok Navigasi Filter Kategori -->
    <div class="mb-8 flex gap-4 justify-center">
-    {{-- Tombol Semua Kategori: Sekarang pakai warna biru transparan kalau tidak aktif --}}
     <a href="/" 
        class="px-4 py-2 rounded shadow-sm transition font-medium 
        {{ !request('category') ? 'bg-gray-300 text-black font-bold' : 'bg-indigo-100 hover:bg-indigo-200 text-indigo-700' }}">
         Semua Kategori
     </a>
     
-    {{-- Looping Kategori Lainnya --}}
     @foreach($categories as $cat)
         <a href="/?category={{ $cat->slug }}" 
            class="px-4 py-2 rounded shadow-sm transition font-medium 
@@ -121,10 +119,8 @@
         <p class="text-slate-400 text-sm mt-1">Daftar partner tepercaya yang mendukung AmikomEventHub.</p>
     </div>
 
-    {{-- DIUBAH: Menggunakan flex & justify-center agar item berapapun jumlahnya SELALU di tengah --}}
     <div class="flex flex-wrap justify-center gap-6 max-w-5xl mx-auto">
         @forelse($partners as $partner)
-        {{-- DIUBAH: Menambahkan w-40 (lebar tetap) dan shrink-0 agar card berbentuk kotak rapi --}}
         <div class="w-40 bg-white border border-slate-100 p-4 rounded-2xl shadow-sm flex flex-col items-center justify-center py-6 hover:shadow-md hover:border-indigo-500/20 transition-all duration-300 group shrink-0">
 
             {{-- Kontainer Gambar/Logo --}}
@@ -139,7 +135,6 @@
             </p>
         </div>
         @empty
-        {{-- DIUBAH: Menyesuaikan class text empty untuk flex layout --}}
         <div class="w-full text-center py-4 text-slate-400 font-medium text-sm">
             Belum ada partner resmi yang terdaftar.
         </div>

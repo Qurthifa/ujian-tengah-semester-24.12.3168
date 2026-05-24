@@ -8,7 +8,7 @@ use Illuminate\Support\Str;
 
 class CategoryController extends Controller
 {
-    // List kategori + search
+
     public function index(Request $request)
     {
         $search = $request->search;

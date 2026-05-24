@@ -26,7 +26,6 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
     // dan seterusnya...
 });
 
-// Cari bagian ini di paling bawah web.php kamu, lalu ganti dengan ini:
 Route::prefix('admin')->name('admin.')->group(function () {
     Route::resource('partners', PartnerController::class);
     Route::get('/partners', [PartnerController::class, 'index'])->name('partners.index');

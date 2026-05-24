@@ -1,6 +1,5 @@
 <?php
 
-// FIXCODE: Namespace harus mencerminkan folder luar, hilangkan kata \Admin
 namespace App\Http\Controllers; 
 
 use App\Http\Controllers\Controller;
@@ -30,7 +29,6 @@ class PartnerController extends Controller
 
     public function store(Request $request)
     {
-        // Validasi input teks URL internet biasa
         $data = $request->validate([
             'name' => 'required|string|max:255',
             'logo_url' => 'required|url|max:255', 

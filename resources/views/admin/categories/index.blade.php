@@ -15,7 +15,6 @@
     
     {{-- Search --}}
     <form action="{{ route('admin.categories.index') }}" method="GET" class="w-full sm:w-auto">
-        {{-- Search Input Modern: Posisi ikon kaca pembesar diletakkan di sisi kiri input --}}
         <div class="relative w-full sm:w-80 group">
             <span class="absolute inset-y-0 left-0 flex items-center pl-4 text-slate-400 group-focus-within:text-indigo-500 transition-colors duration-200">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2">
